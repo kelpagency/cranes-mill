@@ -1,0 +1,51 @@
+<div class="wrapper">
+	<div class="menu-logo-wrapper">
+		<div class="hamburger-menu">
+			<button class="menu-button">
+				<div class="menu-bars">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g><g><path d="M22.127,29.5h59.168c1.657,0,3-1.343,3-3s-1.343-3-3-3H22.127c-1.657,0-3,1.343-3,3S20.47,29.5,22.127,29.5z"/><path d="M81.295,45H22.127c-1.657,0-3,1.343-3,3s1.343,3,3,3h59.168c1.657,0,3-1.343,3-3S82.952,45,81.295,45z"/><path d="M81.295,66.5H22.127c-1.657,0-3,1.343-3,3s1.343,3,3,3h59.168c1.657,0,3-1.343,3-3S82.952,66.5,81.295,66.5z"/></g></g></svg>
+				</div>
+			</button>
+		</div>
+		<a class="header-logo" href="{{ site.url }}" rel="home">
+			{% if logo.src %}
+				<img src="{{ logo.src }}" srcset="{{ logo.srcset }}" width="{{ logo.width }}" height="{{ logo.height }}" alt="{{ site.title }}" />
+			{% else %}
+				{{ site.title }}
+			{% endif %}
+		</a>
+	</div>
+	<div class="cta-wrapper">
+		<p class="header-text">{{options.header_text}}</p>
+		<a class="header-btn" href="{{options.header_button.url}}">
+				{{options.header_button.title}}
+		</a>
+	</div>
+</div>
+<!-- Sidebar content -->
+<aside class="sidebar">
+	<div class="sidebar-content">
+		<div class="nav-container">
+			<button class="close-btn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 19.414 19.414">
+					<g id="Group_17" data-name="Group 17" transform="translate(-1.293 3.715)">
+						<line id="Line_1" data-name="Line 1" y1="18" x2="18" transform="translate(2 -3.007)" fill="none" stroke="white" stroke-width="2"/>
+						<line id="Line_2" data-name="Line 2" x2="18" y2="18" transform="translate(2 -3.007)" fill="none" stroke="white" stroke-width="2"/>
+					</g>
+				</svg>
+			</button>
+			{% if header_menu.get_items %}
+				<nav class="header-navigation" role="navigation">
+					{% include "components/menu.twig" with {'items': header_menu.get_items} %}
+				</nav>
+			{% endif %}
+		</div>
+		<div class="contact">
+			<h3>{{options.heading}}</h3>
+			<p>{{options.description}}</p>
+			<a class="sidebar-btn" href="{{options.sidebar_button.url}}">
+				{{options.sidebar_button.title}}
+			</a>
+		</div>
+	</div>
+</aside>

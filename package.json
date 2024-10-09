@@ -1,0 +1,14 @@
+{
+  "name": "kelp-boilerplate-wp-theme",
+  "description": "The standard for building WordPress themes at Kelp.",
+  "version": "1.0.0",
+  "author": "Kelp Agency",
+  "repository": {
+    "url": "https://github.com/kelpagency/boilerplate-wp"
+  },
+  "dependencies": {
+    "photoswipe": "^5.4.3",
+    "sanitize.css": "^13.0.0",
+    "simplycountdown.js": "^1.7.0"
+  }
+}

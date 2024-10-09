@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/**
+ * Screen sizes
+ */
+$screen-xs: 450px;
+$screen-sm: 768px;
+$screen-md: 960px;
+$screen-lg: 1202px;
+
+/**
+  * Colors
+  */
+$blue: #017bc1;
+$teal: #45b29d;
+$yellow: #efc94c;
+$orange: #e27a3f;
+$red: #df4949;
+$white: #fefefe;
+$grey: #bbbbbb;
+$black: #1f232a;
+
+:root {
+	// colors
+	--primary-color: #1E4062;
+	--secondary-color: #FFF5EE;
+	--accent-yellow: #B19751;
+	--accent-red: #843B49;
+	--primary-text: #3C3C3C;
+
+	// typography
+	--heading-font: 'Crimson Text';
+	--body-font: 'Crimson Text';
+	--accent-font: 'Montserrat';
+}

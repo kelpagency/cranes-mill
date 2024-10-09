@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-content post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+		<div class="main-content-hero">
+			<img src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.srcset }}" alt="{{ post.thumbnail.alt }}" width="{{ post.thumbnail.width }}" height="{{ post.thumbnail.height }}" />
+			<h1>{{ post.title }}</h1>
+			<p><span>By</span> <a href="{{ post.author.path }}">{{ post.author.name }}</a> <span>&bull;</span> <time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time></p>
+		</div>
+		{{ post.content }}
+		<div class="main-content-comments">
+			{# show existing comments and replies #}
+			{% for comment in post.comments %}
+				{% include "components/comments.twig" with { comment:comment } %}
+			{% endfor %}
+			{# new comments #}
+			{% if post.comment_status == "closed" %}
+				<p>Comments for this post are closed.</p>
+			{% else %}
+				{% include "components/comment-form.twig" %}
+			{% endif %}
+		</div>
+	</article>
+{% endblock %}

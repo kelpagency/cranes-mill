@@ -1,0 +1,8 @@
+<article class="tease tease--{{ post.post_type }}">
+	{% if post.thumbnail %}
+		<img loading="lazy" src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.srcset }}" width="{{ post.thumbnail.width }}" height="{{ post.thumbnail.height }}" alt="{{ post.thumbnail.alt }}" />
+	{% endif %}
+	<h3 class="p"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+	{% do action( 'woocommerce_after_shop_loop_item_title' ) %}
+	{% do action( 'woocommerce_after_shop_loop_item' ) %}
+</article>

@@ -1,0 +1,25 @@
+<div class="comment comment--{{ comment.comment_type }}" id="comment-{{ comment.id }}">
+	<img class="comment-avatar" loading="lazy" src="{{ comment.avatar(75) }}" srcset="{{ comment.avatar(75) }} 1x, {{ comment.avatar(150) }} 2x" width="75" />
+	<div class="comment-text">
+		<h5 class="comment-text-author">
+			{{ comment.author.name }} says
+		</h5>
+		<div class="comment-text-content">
+			{{ comment.content|wpautop }}
+		</div>
+		<div class="comment--children">
+			<button class="comment-form-button button">Reply</button>
+			<div class="comment-form-reply hidden">
+				{% include "components/comment-form.twig" %}
+			</div>
+			<!-- nested comments -->
+			{% if comment.comments %}
+				<div class="comment-form-replies">
+					{% for comment in comment.children %}
+						{% include "components/comments.twig" with { comment:comment } %}
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

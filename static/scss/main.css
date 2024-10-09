@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/**
+ * npm package - similar to a CSS reset/normalize
+ */
+/**
+/**
+ * WordPress-specific style overrides
+ */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/**
+ * Screen sizes
+ */
+/**
+  * Colors
+  */
+:root {
+  --primary-color: #FFF5EE;
+  --secondary-color: #1E4062;
+  --accent-yellow: #B19751;
+  --accent-red: #843B49;
+  --heading-font: system-ui;
+  --body-font: system-ui;
+}
+
+.wp-block-image {
+  margin: 0;
+}
+
+.wp-block-separator {
+  width: 100px;
+  border: 3px solid #df4949;
+  margin: 0 auto 0 0;
+  display: block;
+}
+
+.wp-block-columns {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.wp-block-group__inner-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.wp-block-group__inner-container .wp-block-columns {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 782px) {
+  .wp-block-column:not(:first-child) {
+    /**
+       * Change the default column gutter size here
+       * e.g. margin-left: 4em;
+       */
+  }
+}
+/**
+ * The foundation
+ */
+/**
+ * For styling generic html tag elements and globally accessible things.
+ */
+/**
+ * For smooth scrolling anchor links
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}
+
+/**
+ * For forcing footer to bottom of window
+ */
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+/**
+ * Skip to content link
+ */
+a.skip-link {
+  background: #1f232a;
+  color: #fff;
+  font-weight: 700;
+  left: 50%;
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 200ms ease;
+  display: block;
+}
+a.skip-link:focus {
+  transform: translateY(0%);
+}
+
+/**
+ * Selected text colors
+ */
+::-moz-selection {
+  background: var(--primary-color);
+  color: #fefefe;
+  text-shadow: none;
+}
+::selection {
+  background: var(--primary-color);
+  color: #fefefe;
+  text-shadow: none;
+}
+
+/**
+ * Remove outline for non-keyboard :focus
+ */
+*:focus {
+  outline: none;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1140,16,1.25,6,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+:root {
+  --step-0: clamp(1rem, 1rem + 0vw, 1rem);
+  --step-1: clamp(1.13rem, 1.08rem + 0.24vw, 1.25rem);
+  --step-2: clamp(1.27rem, 1.15rem + 0.58vw, 1.56rem);
+  --step-3: clamp(1.42rem, 1.22rem + 1.03vw, 1.95rem);
+  --step-4: clamp(1.6rem, 1.27rem + 1.64vw, 2.44rem);
+  --step-5: clamp(1.8rem, 1.31rem + 2.44vw, 3.05rem);
+  --step-6: clamp(2.03rem, 1.33rem + 3.49vw, 3.82rem);
+}
+
+body {
+  font-size: var(--step-0);
+  line-height: 1.875;
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * Default link styles
+ */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: var(--primary-color);
+  text-decoration: underline;
+  outline: none;
+}
+
+/**
+ * Heading styles
+ */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--heading-font);
+  margin: 0;
+}
+
+h1,
+.h1 {
+  font-size: var(--step-6);
+  line-height: 1.1;
+}
+
+h2,
+.h2 {
+  font-size: var(--step-5);
+  line-height: 1.2;
+}
+
+h3,
+.h3 {
+  font-size: var(--step-3);
+  line-height: 1.3;
+}
+
+h4,
+.h4 {
+  font-size: var(--step-2);
+  line-height: 1.4;
+}
+
+h5,
+.h5 {
+  font-size: var(--step-1);
+}
+
+h6,
+.h6 {
+  font-size: var(--step-0);
+}
+
+.wrapper,
+.wp-block-group__inner-container {
+  max-width: 1202px;
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/**
+ * Global Components (re-usable global things)
+ * block specific styles should be kept inside the relevant `/views/blocks/...` folder.
+ */
+blockquote {
+  margin: 2rem;
+  font-style: italic;
+}
+blockquote:before {
+  content: "“";
+  display: block;
+  font-size: 2rem;
+  height: 0;
+  left: -1.5rem;
+  position: relative;
+  top: -0.5rem;
+}
+
+/**
+ * Pagination
+ */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.pagination > * {
+  margin: 0.5rem;
+}
+.pagination .button {
+  margin: 0;
+  padding: 0.5rem;
+  line-height: 1;
+  min-width: 2rem;
+}
+
+/**
+ * Global layout styles
+ */
+/**
+ * Desktop menu styles
+ */
+@media (min-width: 900px) {
+  header .wrapper {
+    display: flex;
+  }
+  .hamburger-menu {
+    width: 100px;
+    height: 100px;
+    background: var(--secondary-color);
+  }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .header-nav li:before {
+    display: none;
+  }
+  .header-nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header-nav > ul > li {
+    position: relative;
+  }
+  .header-nav > ul > li > a {
+    display: block;
+    padding: 1rem;
+  }
+  .header-nav > ul > li > ul {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    padding: 0.5rem;
+    min-width: 250px;
+    background: #fefefe;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+  .header-nav > ul > li > ul a {
+    display: block;
+    padding: 0.5rem;
+  }
+  .header-nav > ul > li:hover > ul, .header-nav > ul > li:focus-within > ul {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/**
+ * Mobile nav trigger button
+ */
+.header-trigger {
+  margin-bottom: 0;
+  margin-left: auto;
+}
+@media (min-width: 900px) {
+  .header-trigger {
+    display: none;
+  }
+}
+
+/**
+ * Mobile nav styles (if you want to override mmenu-light's default styles)
+ */
+.main-content > *,
+.main-content .wp-block-group__inner-container > * {
+  max-width: 1202px;
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-content > *.alignwide,
+.main-content .wp-block-group__inner-container > *.alignwide {
+  width: 100%;
+}
+.main-content > *.alignfull,
+.main-content .wp-block-group__inner-container > *.alignfull {
+  max-width: none;
+  width: 100%;
+}
+.main-content-comments {
+  clear: both;
+}
+.main-content-comments .comment-box {
+  margin-left: 1rem;
+}
+
+.footer {
+  padding: 3rem 0;
+  background: rgb(38, 38, 38);
+  color: #fefefe;
+}
+.footer a {
+  color: #fefefe;
+}
+.footer h3,
+.footer h4 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+/* Main column width */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wp-block {
+  max-width: 1202px;
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wp-block[data-align=wide] {
+  width: 100%;
+}
+.wp-block[data-align=full] {
+  max-width: none;
+  width: 100%;
+}
+
+.acf-button {
+  padding: 0.5rem 0.7rem !important;
+  background: unset !important;
+}

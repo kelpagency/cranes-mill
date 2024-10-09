@@ -1,0 +1,35 @@
+@use "../base/variables" as *;
+
+.wp-block-image {
+	margin: 0;
+}
+
+.wp-block-separator {
+	width: 100px;
+	border: 3px solid $red;
+	margin: 0 auto 0 0;
+	display: block;
+}
+
+.wp-block-columns {
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+}
+
+.wp-block-group__inner-container {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	.wp-block-columns {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+}
+
+@media (min-width: 782px) {
+	.wp-block-column:not(:first-child) {
+		/**
+     * Change the default column gutter size here
+     * e.g. margin-left: 4em;
+     */
+	}
+}

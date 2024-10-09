@@ -1,0 +1,36 @@
+{
+	"name": "kelpagency/kelp-boilerplate-wp",
+	"description": "Kelp's standard for building WordPress themes.",
+	"type": "wordpress-theme",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"authors": [
+		{
+			"email": "stefen@kelp.agency",
+			"name": "Stefen Phelps"
+		}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://connect.advancedcustomfields.com"
+		}
+	],
+	"require": {
+		"timber/timber": "^2.0",
+		"palmiak/timber-acf-wp-blocks": "^1.14",
+		"wpengine/advanced-custom-fields-pro": "*"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	},
+	"extra": {
+		"installer-paths": {
+			"vendor/wpengine/{$name}/": [
+				"type:wordpress-plugin"
+			]
+		}
+	}
+}

@@ -1,0 +1,54 @@
+@use "../base/variables" as *;
+
+@mixin button($background, $text-color) {
+	display: inline-flex;
+	background-color: $background;
+	border: 1px solid $background;
+	border-radius: 5px;
+	padding: 0.5rem 1.25rem;
+	text-decoration: none;
+	color: $text-color;
+	cursor: pointer;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $text-color;
+	}
+}
+
+.button,
+input[type="submit"],
+.wp-block-button .wp-block-button__link {
+	@include button(var(--primary-color), $white);
+	&.button--white {
+		border-color: $white;
+		color: $white;
+		&:hover,
+		&:focus {
+			background-color: $white;
+			color: $black !important;
+		}
+	}
+	&.button--small {
+		min-width: 120px;
+		padding: 3px 18px;
+		font-size: 13px;
+		line-height: 25px;
+	}
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	background-color: transparent;
+	color: var(--primary-color);
+	&:hover,
+	&:focus {
+		background: var(--primary-color);
+		color: white;
+	}
+}
+
+.disabled,
+input[type="submit"]:disabled {
+	@include button(#ddd, #bbb);
+	cursor: not-allowed;
+}

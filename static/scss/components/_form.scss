@@ -1,0 +1,71 @@
+@use "../base/variables" as *;
+
+label {
+	display: block;
+}
+
+textarea,
+select,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"] {
+	font-size: inherit;
+	width: 100%;
+	border: 1px solid $grey;
+	padding: 0.375rem 0.5rem;
+	border-radius: 3px;
+	accent-color: var(--secondary-color);
+	&:focus {
+		border-color: var(--secondary-color);
+		outline: none;
+	}
+}
+
+select {
+	background-position: calc(100% - 1rem) 50%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	appearance: none;
+	margin: 0;
+	width: 1.15em;
+	height: 1.15em;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	transform: translateY(-0.075em);
+	display: grid;
+	place-content: center;
+	&::before {
+		content: "";
+		width: 0.65em;
+		height: 0.65em;
+		border-radius: 50%;
+		transform: scale(0);
+		box-shadow: inset 1em 1em var(--secondary-color);
+		transition: 120ms transform ease-in-out;
+	}
+	&:checked::before {
+		transform: scale(1);
+	}
+	&:focus {
+		outline: max(2px, 0.15em) solid currentColor;
+		outline-offset: max(2px, 0.15em);
+	}
+}
+input[type="checkbox"] {
+	border-radius: 0.125rem;
+	&::before {
+		border-radius: 0.1rem;
+	}
+}

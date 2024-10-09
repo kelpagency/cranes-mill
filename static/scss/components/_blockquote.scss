@@ -1,0 +1,15 @@
+@use "../base/variables" as *;
+
+blockquote {
+	margin: 2rem;
+	font-style: italic;
+	&:before {
+		content: "\201C";
+		display: block;
+		font-size: 2rem;
+		height: 0;
+		left: -1.5rem;
+		position: relative;
+		top: -0.5rem;
+	}
+}
