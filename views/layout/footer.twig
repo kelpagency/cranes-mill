@@ -1,4 +1,49 @@
-<div class="wrapper">
-	{{ footer_widgets }}
-	<small>Copyright {{ "now"|date('Y') }}</small>
+<div class="footer-wrapper">
+	<div class="logo-nav-wrapper">
+		<div class="footer-logo-container">
+			<a class="footer-logo" href="{{ site.url }}" rel="home">
+				<img src="{{ Image(options.footer_image).src }}" width="300px" alt="{{ site.title }}" />
+			</a>
+			<a class="tagline" href="#">
+				<p>Part of The Lutheran Social Ministries of NJ</p>
+			</a>
+		</div>
+		<div class="footer-nav-wrapper"
+			{% if header_menu.get_items %}
+				<nav class="footer-navigation" role="navigation">
+					{% include "components/menu.twig" with {'items': footer_menu.get_items} %}
+				</nav>
+			{% endif %}
+		</div>
+	</div>
+	<div class="contact-wrapper">
+		<div class="footer-icons">
+			{% for image in options.footer_icons %}
+				<div class="footer-icon-wrapper">
+					<img src="{{ get_image(image).src }}" loading=“lazy” />
+				</div>
+			{% endfor %}
+		</div>
+		<div class="contact-info">
+			<div class="contact-line">
+				<div class="contact-link first">
+					<a href={{options.footer_address.url}}>{{options.footer_address.title}}</a>
+				</div>
+				<div class="contact-link">
+					<a href={{options.footer_phone.url}}>Call: {{options.footer_phone.title}}</a>
+				</div>
+			</div>
+			<div class="contact-line">
+				<div class="contact-link">
+					<a href={{options.footer_email.url}}>Email: {{options.footer_email.title}}</a>
+				</div>
+				<div class="contact-link">
+					<a href={{options.footer_marketing.url}}>Marketing: {{options.footer_marketing.title}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright-wrapper">
+		<p>&copy; <span id="copyright-year"></span> {{options.footer_copyright}}</p>
+	</div>
 </div>

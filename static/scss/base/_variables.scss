@@ -22,15 +22,15 @@ $grey: #bbbbbb;
 $black: #1f232a;
 
 :root {
-	// colors
-	--primary-color: #1E4062;
-	--secondary-color: #FFF5EE;
-	--accent-yellow: #B19751;
-	--accent-red: #843B49;
-	--primary-text: #3C3C3C;
-
 	// typography
 	--heading-font: 'Crimson Text';
 	--body-font: 'Crimson Text';
 	--accent-font: 'Montserrat';
+
+	// colors
+	--e-global-color-text: #363232;
+	--e-global-color-primary: #1e4062;
+	--e-global-color-secondary: #fcf9f2;
+	--e-global-color-0e8d878: #b19751;
+	--e-global-color-accent: #843b49;
 }

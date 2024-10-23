@@ -36,3 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// *********************
+// Copywrite year
+// *********************
+document.getElementById("copyright-year").innerHTML = new Date().getFullYear();

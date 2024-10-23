@@ -1,17 +1,250 @@
 @use "../base/variables" as *;
 
-.footer {
-	padding: 3rem 0;
-	background: rgb(38, 38, 38);
+footer {
+	background: #fcf9f2;
+}
+
+.footer-wrapper {
+	padding: 3% 5rem;
+	background: #1E4062;
 	color: $white;
-	a {
-		color: $white;
+	max-width: 1202px;
+	width: 93%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	> .logo-nav-wrapper {
+		display: flex;
+		width: 100%;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #2C5379;
+
+		> .footer-logo-container {
+			width: 35%;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			> .footer-logo {
+				width: 300px;
+				height: auto;
+
+				img {
+					width: 300px;
+					height: auto;
+					object-fit: fill;
+				}
+			}
+
+			> .tagline {
+				text-decoration: none;
+
+				> p {
+					color: white;
+					text-decoration: underline;
+				}
+
+			}
+		}
+		> .footer-nav-wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			> ul {
+				display: flex;
+				width: 100%;
+				height: fit-content;
+				justify-content: flex-end;
+
+				> li {
+					list-style: none;
+					padding: 0 40px;
+					border-left: 1px solid #b19751;
+
+					&:nth-of-type(1) {
+						border: none;
+					}
+					> a {
+						text-decoration: none;
+						overflow-y: hidden;
+						background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, white, white);
+						background-size: 100% 1px, 0 1px;
+						background-repeat: no-repeat;
+						background-position: 100% 90%, 0 90%;
+						transition: ease .3s;
+
+						&:hover {
+							color: white;
+							background-size:0 1px, 100% 1px;
+						}
+					}
+				}
+			}
+		}
 	}
-	h3,
-	h4 {
-		font-size: 1.25rem;
-		text-transform: uppercase;
-		margin-top: 1rem;
-		margin-bottom: 0;
+	> .contact-wrapper {
+		width: 100%;
+		display: flex;
+		padding: 20px 0;
+		border-bottom: 1px solid #2C5379;
+
+		> .footer-icons {
+			width: 35%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 20px;
+
+			> .footer-icon-wrapper {
+				height: 40px;
+				width: auto;
+
+				> img {
+					height: 100%;
+					width: auto;
+				}
+			}
+		}
+
+		> .contact-info {
+			width: 65%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+
+			> .contact-line {
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				padding: 10px 0;
+
+				> .contact-link {
+					padding: 0 15px;
+
+					&:nth-of-type(1) {
+						border-right: 1px solid #b19751;
+					}
+
+					> a {
+						text-decoration: none; 
+						color: white;
+						
+
+						&:hover {
+							color: white;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	> .copyright-wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding-top: 40px;
+
+		> a {
+			text-decoration: none;
+			
+			&:hover {
+				text-decoration: underline;
+				color: white;
+			}
+		}
+	}
+}
+
+/**
+ * Mobile footer styles
+ */
+
+@media only screen and (max-width:900px) {
+	.footer-wrapper {
+		flex-direction: column;
+		gap: 20px;
+		padding: 2rem 2rem;
+
+		> .logo-nav-wrapper {
+			flex-direction: column;
+
+			> .footer-logo-container {
+				width: 100%;
+				align-items: center;
+
+				> .footer-logo {
+					width: 200px;
+
+					> img {
+						width: 100%;
+					}
+				}
+
+				> .tagline {
+					text-align: center;
+				}
+			}
+			
+			> .footer-nav-wrapper {
+				padding-top: 20px;
+
+				> ul {
+					flex-direction: column;
+					align-items: center;
+
+					> li {
+						padding: 15px 20px;
+						border-left: none;
+						border-top: 1px solid #b19751;
+					}
+				}
+			}		
+		}
+		> .contact-wrapper {
+			flex-direction: column;
+			padding: 0;
+			padding-bottom: 20px;
+
+			> .contact-info {
+				width: 100%;
+
+				> .contact-line {
+					flex-direction: column;
+
+					> .contact-link {
+						text-align: center;
+						border-right: none;
+						border-top: 1px solid #b19751;
+						padding: 15px 0;
+
+						&:nth-of-type(1) {
+							border-right: none;
+						}
+					}
+
+					> .first {
+						border-top: none;
+					}
+				}
+			}
+		}
+
+		> .copyright-wrapper {
+			padding: 0;
+			padding-top: 20px;
+
+			> p {
+				text-align: center;
+			}
+		}
 	}
 }

@@ -57,7 +57,7 @@ a.skip-link {
  * Selected text colors
  */
 ::selection {
-	background: var(--primary-color);
+	background: var(--e-global-color-primary);
 	color: $white;
 	text-shadow: none;
 }
