@@ -36,10 +36,10 @@ function global_timber_context($context)
 }
 
 // Hide the ACF admin menu item when in production.
-if ('production' === wp_get_environment_type()) {
-	add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
-	function my_acf_settings_show_admin($show_admin)
-	{
-		return false;
-	}
-}
+// if ('production' === wp_get_environment_type()) {
+// 	add_filter('acf/settings/show_admin', 'my_acf_settings_show_admin');
+// 	function my_acf_settings_show_admin($show_admin)
+// 	{
+// 		return false;
+// 	}
+// }
