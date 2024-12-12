@@ -3,27 +3,6 @@
     "title": "Header",
     "fields": [
         {
-            "key": "field_6705ec4446cb4",
-            "label": "Header text",
-            "name": "header_text",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Lorem ipsum dolor sit.",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6705ec8946cb5",
             "label": "Header button",
             "name": "header_button",
@@ -59,5 +38,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728443241
+    "modified": 1733891640
 }

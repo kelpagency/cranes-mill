@@ -14,9 +14,13 @@
 				{{ site.title }}
 			{% endif %}
 		</a>
+		{% if header_menu.get_items %}
+			<nav class="header-navigation" role="navigation">
+				{% include "components/menu.twig" with {'items': header_menu.get_items} %}
+			</nav>
+		{% endif %}
 	</div>
 	<div class="cta-wrapper">
-		<p class="header-text">{{options.header_text}}</p>
 		<a class="header-btn" href="{{options.header_button.url}}">
 				{{options.header_button.title}}
 		</a>
@@ -35,7 +39,7 @@
 				</svg>
 			</button>
 			{% if header_menu.get_items %}
-				<nav class="header-navigation" role="navigation">
+				<nav class="mobile-header-navigation" role="navigation">
 					{% include "components/menu.twig" with {'items': header_menu.get_items} %}
 				</nav>
 			{% endif %}

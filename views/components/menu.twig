@@ -11,7 +11,7 @@
 				</button>
 				{% endif %}
 			{% if item.children %}
-			<ul>
+			<ul class="sub-menu">
 				{% for subitem in item.children %}
 					<li class="{{ subitem.classes|join(' ') }}">
 						<a target="{{ subitem.is_external ? '_blank' : '_self' }}" href="{{ subitem.link }}">{{ subitem.title }}</a>
