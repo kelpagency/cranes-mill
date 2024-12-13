@@ -7,8 +7,8 @@
     "url": "https://github.com/kelpagency/boilerplate-wp"
   },
   "dependencies": {
-    "photoswipe": "^5.4.3",
+    "photoswipe": "^5.4.4",
     "sanitize.css": "^13.0.0",
-    "simplycountdown.js": "^1.7.0"
+    "simplycountdown.js": "^2.0.1"
   }
 }

@@ -766,14 +766,6 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/template-design-system.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/template-design-system.php",
-      "oF" : 0
-    },
     "\/vendor\/autoload.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -10934,14 +10926,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/views\/pages\/404.twig",
-      "oF" : 0
-    },
-    "\/views\/pages\/design-system.twig" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/design-system.twig",
       "oF" : 0
     },
     "\/views\/pages\/page-plugin.twig" : {

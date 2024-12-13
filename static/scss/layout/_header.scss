@@ -12,6 +12,7 @@
 		> .wrapper {
 			display: flex;
 			max-width: 1350px;
+			max-width: 1350px;
 			align-items: center;
 			justify-content: space-between;
 			padding: 1.5rem 0;
@@ -321,6 +322,7 @@
 			border: none;
 			}
 			> .mobile-header-navigation {
+			> .mobile-header-navigation {
 				display: flex;
 				align-items: flex-start;
 				position: relative;
@@ -443,6 +445,12 @@
 	left: 0;
 }
 
+.hide {
+	display: none;
+}
+.show-mobile {
+	display: block;
+}
 .hide {
 	display: none;
 }

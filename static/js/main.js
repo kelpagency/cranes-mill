@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Hamburger menu
   // *********************
 
+
   const sidebar = document.querySelector(".sidebar")
 
   const closeSidebar = document.querySelector(".close-btn")
