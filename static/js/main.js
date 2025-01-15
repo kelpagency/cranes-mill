@@ -74,3 +74,25 @@ document.addEventListener("DOMContentLoaded", function () {
 // Copywrite year
 // *********************
 document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+
+// *********************
+// Floor plan popups
+// *********************
+const floorplans = document.querySelectorAll(".floorplan-tease");
+
+if (floorplans.length > 0) {
+  floorplans.forEach(function (item) {
+    const button = item.querySelector(".elementor-button");
+    const close = item.querySelector(".floorplan-popup .elementor-button");
+    if (button) {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        item.classList.add("popup-active");
+      });
+      close.addEventListener("click", function (event) {
+        event.preventDefault();
+        item.classList.remove("popup-active");
+      });
+    }
+  });
+}
